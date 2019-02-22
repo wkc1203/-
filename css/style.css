@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* outline: none; */
+  -webkit-tap-highlight-color: transparent;
+}
+
+html, body {
+  height: 100%;
+}
+
+.page {
+  display: block;
+  width: 100%;
+  min-height: 100%;
+}
+
+.hotarea {
+  position: absolute;
+  background-color: rgba(0,255,0, .3);
+}
