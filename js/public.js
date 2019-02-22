@@ -12,7 +12,7 @@
 
     $a.href = to || '#'
     $a.className = 'hotarea'
-    $a.title = title
+    title && ($a.title = title)
 
     $a.style.left = pxToRem(coords[0])
     $a.style.top = pxToRem(coords[1])
