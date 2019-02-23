@@ -6,34 +6,87 @@
 
   <title></title>
 
+  <link rel="stylesheet" href="css/swiper.min.css">
   <link rel="stylesheet" href="css/style.css">
 
   <script type="text/javascript" src="js/flexible.js"></script>
+  <script type="text/javascript" src="js/swiper.min.js"></script>
   <script type="text/javascript" src="js/public.js"></script>
 </head>
 <body>
   <img src="img/首页样式1.png" class="page">
 
-  <div class="nav">
-    <a href="#">
-      <i></i>
-      <span>首页</span>
-    </a>
-    <a href="#">
-      <i></i>
-      <span>贷款</span>
-    </a>
-    <a href="#">
-      <i></i>
-      <span>发现</span>
-    </a>
-    <a href="#">
-      <i></i>
-      <span>我的</span>
-    </a>
+  <div class="swiper-container query-entry">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <h1>重庆公积金快速查询</h1>
+        <h4>11,634,17人查询成功</h4>
+
+        <a href="公积金查询样式1.html">开始查询</a>
+      </div>
+      <div class="swiper-slide">
+        <h1>重庆住房信息快速查询</h1>
+        <h4>11,555,66人查询成功</h4>
+
+        <a href="住房信息查询.html">开始查询</a>
+      </div>
+    </div>
+
+    <!-- 分页器 -->
+    <div class="swiper-pagination"></div>
   </div>
+
 </body>
 <script>
-  createArea([82, 221, 212, 48], 'b.html')
+  var mySwiper = new Swiper ('.swiper-container', {
+    // loop: true,
+    width: window.innerWidth - 40,
+    centeredSlides: true,
+    slidesOffsetBefore: 20,
+    slidesOffsetAfter: 20,
+    spaceBetween: 10,
+
+    // 分页器
+    pagination: {
+      el: '.swiper-pagination',
+    }
+  })
+
+  // 创建菜单
+  createNav(0)
+
+  // 开始查询-已登陆
+  createArea([100, 221, 50, 48], '住房信息查询.html');
+  //开始查询-未登陆
+  createArea([230, 221, 50, 48], '登录.html')
+  //住房查询-已登录
+  createArea([32, 347, 15, 40], '住房信息查询.html')
+  //住房查询-未登录
+  createArea([60, 347, 15, 40], '登录.html')
+  //公积金查询样式1-已登录
+  createArea([124, 349, 15, 34], '公积金查询样式1.html')
+  //公积金查询样式1-未登录
+  createArea([145, 349, 15, 34], '登录.html')
+  //未登陆
+  // createArea([124, 349, 34, 34], '登录.html')
+  // 信用贷款
+  createArea([213, 347, 40, 40], '贷款.html')
+  //信用卡
+  createArea([303, 347, 40, 40], '信用卡.html')
+  //车位贷款
+  createArea([15, 498, 345, 179], '车位贷介绍.html')
+  //公积金贷款
+  createArea([15, 687, 345, 179], '贷款-芝麻授权.html')
+  //热门资讯
+  createArea([15, 953, 206, 52], '发现-资讯详情.html')
+  createArea([15, 1074, 206, 52], '发现-资讯详情.html')
+  createArea([15, 1195, 206, 52], '发现-资讯详情.html')
+  createArea([160, 1316, 56, 14], '发现.html')
+  //贷款
+  createArea([127, 1373, 28, 28], '贷款.html')
+  //发现
+  createArea([221, 1373, 28, 28], '发现.html')
+  //我的
+  createArea([314, 1373, 28, 28], '我的.html')
 </script>
 </html>
