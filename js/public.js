@@ -36,13 +36,13 @@
       to: './index.html'
     }, {
       text: '贷款',
-      to: './贷款.html'
+      to: './dai_kuan.html'
     }, {
       text: '发现',
-      to: './发现.html'
+      to: './fa_xian.html'
     }, {
       text: '我的',
-      to: './我的.html'
+      to: './wo_de.html'
     }]
 
     var $nav = document.createElement('div')
