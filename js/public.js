@@ -1,4 +1,11 @@
 (function (window, document) {
+  var rem = parseFloat(document.documentElement.style.fontSize)
+
+  // 按照375的设计比例与实际尺寸做对比
+  function pxScale (n) {
+    return parseInt(rem / 37.5 * n)
+  }
+
   // px 像素转换成 rem
   function pxToRem (n) {
     return parseFloat(n / 37.5) + 'rem'
@@ -62,6 +69,7 @@
     document.body.appendChild($nav)
   }
 
+  window.pxScale = pxScale
   window.pxToRem = pxToRem
   window.createArea = createArea
   window.createNav = createNav

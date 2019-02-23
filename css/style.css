@@ -9,6 +9,19 @@ html, body {
   height: 100%;
 }
 
+body {
+  -webkit-text-size-adjust: 100%;
+  background: #eee;
+  min-width: 320px;
+  margin: auto;
+  width: 100%;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+  -webkit-font-smoothing: antialiased;
+  font-family: PingFangSC,"Microsoft YaHei",Helvetica,"Droid Sans",Arial,sans-serif;
+}
+
 .page {
   display: block;
   width: 100%;
@@ -50,8 +63,40 @@ html, body {
 .nav a i {
   width: 0.746667rem;
   height: 0.746667rem;
-  background: red;
+  /* background: red; */
   margin-bottom: 0.053333rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+
+.nav a:nth-child(1) i {
+  background-image: url('../img/icon_shouye_n.png');
+}
+.nav a:nth-child(1).active i,
+.nav a:nth-child(1):active i {
+  background-image: url('../img/icon_shouye_h.png');
+}
+.nav a:nth-child(2) i {
+  background-image: url('../img/icon_daikuan_n.png');
+}
+.nav a:nth-child(2).active i,
+.nav a:nth-child(2):active i {
+  background-image: url('../img/icon_daikuan_h.png');
+}
+.nav a:nth-child(3) i {
+  background-image: url('../img/icon_faxian_n.png');
+}
+.nav a:nth-child(3).active i,
+.nav a:nth-child(3):active i {
+  background-image: url('../img/icon_faxian_h.png');
+}
+.nav a:nth-child(4) i {
+  background-image: url('../img/icon_wode_n.png');
+}
+.nav a:nth-child(4).active i,
+.nav a:nth-child(4):active i {
+  background-image: url('../img/icon_wode_h.png');
 }
 
 .nav a span {
