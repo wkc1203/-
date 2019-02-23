@@ -10,7 +10,7 @@
   function createArea(coords, to, title) {
     var $a = document.createElement('a')
 
-    $a.href = to || '#'
+    $a.href = to && ('./' + to) || '#'
     $a.className = 'hotarea'
     title && ($a.title = title)
 
@@ -26,16 +26,16 @@
   function createNav (activeIndex) {
     var nav = [{
       text: '首页',
-      to: '/index.html'
+      to: './index.html'
     }, {
       text: '贷款',
-      to: '/贷款.html'
+      to: './贷款.html'
     }, {
       text: '发现',
-      to: '/发现.html'
+      to: './发现.html'
     }, {
       text: '我的',
-      to: '/我的.html'
+      to: './我的.html'
     }]
 
     var $nav = document.createElement('div')
@@ -62,6 +62,7 @@
     document.body.appendChild($nav)
   }
 
+  window.pxToRem = pxToRem
   window.createArea = createArea
   window.createNav = createNav
 })(window, document)
