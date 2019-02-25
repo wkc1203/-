@@ -26,6 +26,14 @@
     $a.style.width = pxToRem(coords[2])
     $a.style.height = pxToRem(coords[3])
 
+    if (to instanceof Function) {
+      $a.addEventListener('click', function (e) {
+        e.preventDefault()
+
+        to(e)
+      })
+    }
+
     document.body.appendChild($a)
   }
 
@@ -73,4 +81,12 @@
   window.pxToRem = pxToRem
   window.createArea = createArea
   window.createNav = createNav
+
+  window.onload = function () {
+    if (!window.noBack) {
+      createArea([15, 30, 26, 26], function () {
+        window.history.back()
+      })
+    }
+  }
 })(window, document)
